@@ -1,2 +1,2 @@
-# texts_exercises
-Repository for the texts exercises
+# Exercises
+Repository to collect imwt exercises
