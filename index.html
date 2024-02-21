@@ -4,34 +4,35 @@
     <title>IMWT 2023-2024</title>
     <style>
         body {
-            height: auto;
-            width: auto;
+            background-color: white;
             text-align: center;
-            content: center;
             font-family: "Palatino Linotype";
-            background-image: url("wt_image.jpg");
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
         }
-            
         #h1 {
-            background: linear-gradient( to right,#17a7ef, #1a026a);
+            background: radial-gradient( circle farthest-corner at center center, #3a08df, #110340);
+            background-clip: text;
+            color: transparent;
         }
         #exercises_list {
             text-align: left; /*idea di Pietro Tisci*/
-            color: #17a7ef
+            color: #2e07ad;
         }
         #list_body {
             font-size: 18px;
         }
+        #footer {
+            color:#2e07ad;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
     <body>
-        <div class="bg">
-        <h1 id="h1">Information Modelling and Web Technologies 2023-2024</h1>
+        <h1 id="h1">Information Modelling<br>and<br>Web Technologies<br>2023-2024</h1>
         <div id="exercises_list">
-            <h2 id="h2">Exercises</h2>
+            <h2>Exercises</h2>
             <div id="list_body">
                 <p>Click the links below to see each exercise pages:</p>
                 <ul>
@@ -40,7 +41,11 @@
                 </ul>
             </div>
         </div>
-    </div>
+        <div id="footer" align="center">
+            <h4>Contacts:</h4>
+            <p>Organisation Github page: <a href="https://github.com/imwt-exercises">https://github.com/imwt-exercises</a></p>
+            <p>Institutional email: romolo.dalessandro@studio.unibo.it</p>
+        </div>
     </body>
 </html>
 
