@@ -4,33 +4,42 @@
     <title>IMWT 2023-2024</title>
     <style>
         body {
-            text-align: center; 
-            font-family: "Palatino Linotype"; 
-            background-color:whitesmoke;
-            padding: 1em 20em;
+            text-align: center;
+            content: center;
+            font-family: "Palatino Linotype";
             background-image: url("wt_image.jpg");
             background-position: center;
             background-size: 100%;
             background-repeat: no-repeat;
         }
             
-        .headline { color:aquamarine }
+        #h1 { background: linear-gradient( to right,#1d0cb0, #fe5a02);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+        }
+
         #exercises_list {
             text-align: left; /*idea di Pietro Tisci*/
-            padding: 5px
+            padding: 1em 22em;
+            color: rgb(138, 50, 176)
         }
-        p { color: aquamarine }
+        #list_body {
+            font-size: 18px;
+        }
     </style>
 </head>
     <body>
         <div class="bg">
-        <h1 class="headline">Information Modelling and Web Technologies 2023-2024</h1>
-        <h2 class="headline">Exercises</h2>
-        <div id="exercises_list"><p>Click the link to see each exercise page:</p>
-            <ul>
-                <li><a href="html_exercises.html">HTML Exercises</a></li>
-                <li><a href="https://imwt-exercises.github.io/Form/">Forms Exercises</a></li>
-            </ul>
+        <h1 id="h1">Information Modelling and Web Technologies 2023-2024</h1>
+        <div id="exercises_list">
+            <h2 id="h2">Exercises</h2>
+            <div id="list_body">
+                <p>Click the links below to see each exercise pages:</p>
+                <ul>
+                    <li><a href="html_exercises.html">HTML Exercises</a></li>
+                    <li><a href="https://imwt-exercises.github.io/Form/">Forms Exercises</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     </body>
