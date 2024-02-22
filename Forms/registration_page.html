@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+</head>
+    <body>
+        <h1>Registration Page</h1>
+        <form method="post" action="https://www.fabiovitali.it/TW/DHDK/doResponse.php">
+            <p>
+                <label>Name: <input type="text" name="name" placeholder="Insert your given name"></label>
+                <label>Middle Initial: <input type="text" name="middle-initial" placeholder="Optional"></label>
+                <label>Surname: <input type="text" name="surname" placeholder="Insert your family name"></label>
+            </p>
+            <p>
+                <label>Address: <input type="text" name="address" placeholder="Insert your address"></label>
+                <label>City: <input type="text" name="city" placeholder="City"></label>
+                <label>Country: <select name="country">
+                    <option value="">-- select one --</option>
+                    <option value="italy" selected>Italy</option>
+                    <option value="china">China</option>
+                    <option value="russia">Russia</option>
+                    <option value="kazakistan">Kazakistan</option>
+                </select></label>
+                <label>Zip Code: <input type="number" name="zip-code" placeholder="Insert Zip Code"></label>
+            </p>
+            <p>
+                <label>Phone number: <input type="text" name="telephone-number" placeholder="Insert your phone number"></label>
+                <label>E-mail: <input type="email" name="email" placeholder="example@provider.it"></label>
+            </p>
+            <p>Gender:
+                <label><input type="radio" name="gender" value="m">Male</label>
+                <label><input type="radio" name="gender" value="f">Female</label>
+                <label><input type="radio" name="gender" value="x">Won't say</label>
+            </p>
+            <p>Select your interests:
+                <label><input type="checkbox" name="interests" value="art">Art</label>
+                <label><input type="checkbox" name="interests" value="cin">Cinema</label>
+                <label><input type="checkbox" name="interests" value="com">Comics</label>
+                <label><input type="checkbox" name="interests" value="lit">Literature</label>
+                <label><input type="checkbox" name="interests" value="chickens">Chickens</label>
+            </p>
+            <p>Personal description:<br>
+                <textarea name="personal-description" rows="10" cols="50" placeholder="Write your description"></textarea>
+            </p>
+            <p>
+                <input type="reset" name="cancel" value="Clear fields">
+                <input type="submit" name="submit" value="Submit">
+            </p>
+        </form>
+    </body>
+</html>

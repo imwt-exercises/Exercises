@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+</head>
+    <body>
+        <h1>Book a vacation</h1>
+        <from method="post" action="https://www.fabiovitali.it/TW/DHDK/doResponse.php">
+            <hr>
+            <p>
+                <label>Choose Island <select name="island">
+                    <option value="" selected>-- select one--</option>
+                    <option value="sicilia">Sicilia</option>
+                    <option value="sardegna">Sardegna</option>
+                    <option value="elba">Isola d'Elba</option>
+                    <option value="tremiti">Isole Tremiti</option>
+                </select></label>
+            </p>
+            <p>
+                <label>Arriving: <input type="date" name="arriving"></label>
+                <label>Departing: <input type="date" name="departing"></label>
+            </p>
+            <p>
+                <label>Name: <input type="text" name="name" placeholder="Name"></label>
+                <label>Surame: <input type="text" name="surname" placeholder="Surname"></label>
+            </p>
+            <p>
+                <label>Address: <input type="text" name="address" placeholder="1234 Main St"></label>
+            </p>
+            <p>
+                <label>City: <input type="text" name="city"></label>
+                <label>State <select name="state">
+                    <option value="" selected>Choose...</option>
+                    <option value="italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="republic-of-congo">Republic of Congo</option>
+                    <option value="japan">Japan</option>
+                </select></label>
+                <label>Zip: <input type="text" maxlength="5"></label>
+            </p>
+            <p>
+                <label><input type="checkbox" name="remember-me">Remember me</label>
+            </p>
+            <hr>
+            <p>
+                <input type="submit" name="submit" value="Book your vacation">
+                
+            </p>
+        </from>
+    </body>
+</html>
