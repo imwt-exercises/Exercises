@@ -10,10 +10,6 @@
     font-family: newYorker;
     src: url(new_yorker_font/ACaslonPro-Regular.otf);
 }
-@font-face {
-    font-family: newYorkerBold;
-    src: url(new_yorker_font/ACaslonPro-Bold.otf);
-}
 body {
     background-color: rgb(221, 221, 221);
 }
