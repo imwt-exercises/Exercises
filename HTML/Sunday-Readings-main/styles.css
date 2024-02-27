@@ -42,9 +42,14 @@ img {
 }
 #table-of-contents {
     font-size: 19px;
-    padding: 5px;
     color: white;
     background-color: rgb(52, 52, 52);
+    width: 800px;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 #footer {
     font-size: 20px;
@@ -58,11 +63,12 @@ img {
     margin-top: 15px;
     margin-bottom: 30px;
 }
-
 #block-0 {
-    margin: 1em 2.5em;
+    margin: auto;
+    margin-top: 10px;
     background-color: white;
     padding: 50px;
+    width: 750px
 }
 #block-1 {
     font-family: newYorker;
