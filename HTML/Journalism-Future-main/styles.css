@@ -1,0 +1,84 @@
+@font-face {
+    font-family: newYorkerTitle;
+    src: url(new_yorker_font/NY\ Irvin.ttf)
+}
+@font-face {
+    font-family: newYorkerItalic;
+    src: url(new_yorker_font/ACaslonPro-Italic.otf)
+}
+@font-face {
+    font-family: newYorker;
+    src: url(new_yorker_font/ACaslonPro-Regular.otf);
+}
+@font-face {
+    font-family: newYorkerBold;
+    src: url(new_yorker_font/ACaslonPro-Bold.otf);
+}
+body {
+    background-color: rgb(221, 221, 221);
+}
+#hr-0 {
+    height: 5px;
+    background: linear-gradient(to top, white, rgb(225, 225, 225));
+    border: 0;
+}
+#hr-1 {
+    height: 2px;
+    background-color: rgb(225, 225, 225);
+    border: 0
+}
+h1 {
+    text-transform: uppercase;
+    font-family: newYorkerTitle;
+    font-weight: 200;
+    text-align: center;
+}
+.subscription {
+    font-family: newYorkerItalic;
+}
+#sub-0 {
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#sub-1 {
+    margin-top: 3px;
+    font-size: 17px
+}
+#footer {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+#author {
+    font-family: Calibri;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+img {
+    width: 100%;
+}
+#block-0 {
+    margin: 1em 2.5em;
+    background-color: white;
+    padding: 50px;
+}
+#block-1 {
+    font-family: newYorker;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.paragraph::first-letter {
+    font-size: 300%;
+    initial-letter: 2;
+    margin-right: 5px;
+}
+.chapter {
+    margin-bottom: 570px;
+}
