@@ -16,21 +16,21 @@ function validateMyForm() {
         return false;
     }
 
-    var start_date = document.getElementById('dateFrom').value.toString();
-    const date = new Date();
-    var month = (date.getMonth() + 1).toString().padStart(2, '0');
-    var day = date.getDate().toString().padStart(2, '0');
-    var y_m_d = date.getFullYear() + '-' + month + '-' + day;
-    var end_date = document.getElementById('dateTo').value;
-
-    console.log(start_date>y_m_d);
-
-    
+    const today = new Date();
+    const start_date = new Date(document.getElementById('dateFrom').value);
+    const end_date = new Date(document.getElementById('dateTo').value);
+    var msInAWeek = 1000 * 60 * 60 * 24 * 7;
+    if (start_date.getTime() <= today.getTime()) {
+        alert('Warning! The arriving date must be in the future.');
+        return false;
+    } else if ((end_date.getTime() - start_date.getTime()) < msInAWeek) {
+        alert('Warning! The departing date must be at least seven days after the arriving.');
+        return false;
+    }
 
     var zip = document.getElementById('zip').value;
     if (zip.length < 5) {
         alert('Warning! The Zip code must be at least long five characters.');
         return false;
     }
-
 }
