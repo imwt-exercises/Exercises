@@ -17,3 +17,12 @@ function display(event) {
         document.getElementById('display').value = c + to_add;
     }
 }
+
+function cancel() {
+    document.getElementById('display').value = 0;
+}
+
+function invertSign() {
+    var n = document.getElementById('display').value;
+    document.getElementById('display').value = -1 * n;
+}
