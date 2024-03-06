@@ -28,10 +28,29 @@ function invertSign() {
     document.getElementById('display').value = -1 * n;
 }
 
-function showHead(event) {
+function operation(event) {
     var displayed = document.getElementById('display').value;
-    var clc_head = document.getElementById('clc-head').innerHTML;
     var operator = event.target.value;
-    document.getElementById('clc-head').innerHTML = ' ' + displayed + ' ' + operator;
+    document.getElementById('clc-head').innerHTML = displayed + ' ' + operator;
     document.getElementById('display').value = 0;
+}
+
+function result() {
+    var clc_head = document.getElementById('clc-head').innerHTML;
+    var n1_operator = clc_head.split(' ');
+    var n_1 = parseInt(n1_operator[0]);
+    var operator = n1_operator[1];
+    var n_2 = parseInt(document.getElementById('display').value);
+    document.getElementById('clc-head').innerHTML = 0;
+    if (operator=='+') {
+        document.getElementById('display').value = n_1 + n_2;
+    } else if (operator=='-') {
+        document.getElementById('display').value = n_1 + n_2;
+    } else if (operator=='*') {
+        document.getElementById('display').value = n_1 * n_2;
+    } else if (operator=='/') {
+        document.getElementById('display').value = n_1 / n_2;
+    } else if (operator=='x<sup>y</sup>') {
+        document.getElementById('display').value = n_1 ** n_2;
+    }    
 }
