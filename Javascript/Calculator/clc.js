@@ -20,9 +20,18 @@ function display(event) {
 
 function cancel() {
     document.getElementById('display').value = 0;
+    document.getElementById('clc-head').innerHTML = 0;
 }
 
 function invertSign() {
     var n = document.getElementById('display').value;
     document.getElementById('display').value = -1 * n;
+}
+
+function showHead(event) {
+    var displayed = document.getElementById('display').value;
+    var clc_head = document.getElementById('clc-head').innerHTML;
+    var operator = event.target.value;
+    document.getElementById('clc-head').innerHTML = ' ' + displayed + ' ' + operator;
+    document.getElementById('display').value = 0;
 }
