@@ -11,7 +11,9 @@ function deleter() {
 function display(event) {
     var c = document.getElementById('display').value;
     var to_add = event.target.value;
-    if (c==0) {
+    if (c.length==21) {
+        document.getElementById('display').value = c[0] + '.' + c.slice(0,15) + 'e+21';
+    } else if (c==0) {
         document.getElementById('display').value = to_add;
     } else {
         document.getElementById('display').value = c + to_add;
