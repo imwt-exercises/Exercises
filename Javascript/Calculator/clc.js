@@ -68,15 +68,16 @@ function display_7(event) {
     var equal_pressed = document.getElementById('equal').value;
     if (c.length==21) {
         document.getElementById('display').value = c[0] + '.' + c.slice(0,15) + 'e+21';
-    } else if (c==0 || equal_pressed) {
+    } else if (c==0 || equal_pressed=='true') {
         document.getElementById('display').value = to_add;
+        document.getElementById('equal').value = 'false';
     } else {
         document.getElementById('display').value = c + to_add;
     }
 }
 function operation_7(event) {
     var n = document.getElementById('display').value;
-    var operator = event.target.value;
+    var operator = event.target.value || '**'; // Temporary solution to make it works, face it when you have time
     document.getElementById('display').value = 0;
     document.getElementById('list').value = n + ' ' + operator;
 }
@@ -105,7 +106,7 @@ function result_7() {
             result = n_1 ** n_2;
             isPow = true;
     }
-    ListAndDisplay(n_1, n_2, operator, result, isPow);    
+    ListAndDisplay(n_1, n_2, operator, result, isPow);  
 }
 
 function ListAndDisplay(n_1, n_2, operator, result, bool) {
@@ -127,5 +128,5 @@ function ListAndDisplay(n_1, n_2, operator, result, bool) {
     list = document.getElementById("list");
     list.insertBefore(voce1, null);
 
-    document.getElementById('equal').value = true; //it is to reset in display_7() the display for other operations
+    document.getElementById('equal').value = 'true'; //it is to reset in display_7() the display for other operations
 }
