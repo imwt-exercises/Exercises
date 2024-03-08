@@ -32,7 +32,7 @@ function invertSign() {
 
 function operation(event) {
     var displayed = document.getElementById('display').value;
-    var operator = event.target.value || '**';
+    var operator = event.target.value;
     document.getElementById('clc-head').innerHTML = displayed + ' ' + operator;
     document.getElementById('display').value = 0;
 }
