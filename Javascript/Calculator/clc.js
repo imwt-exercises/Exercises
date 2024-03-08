@@ -32,7 +32,7 @@ function invertSign() {
 
 function operation(event) {
     var displayed = document.getElementById('display').value;
-    var operator = event.target.value;
+    var operator = event.target.value || '**';
     document.getElementById('clc-head').innerHTML = displayed + ' ' + operator;
     document.getElementById('display').value = 0;
 }
@@ -50,7 +50,7 @@ function result() {
         document.getElementById('display').value = n_1 * n_2;
     } else if (operator=='/') {
         document.getElementById('display').value = n_1 / n_2;
-    } else if (operator=='x<sup>y</sup>') {
+    } else if (operator=='**') {
         document.getElementById('display').value = n_1 ** n_2;
     }    
 }
