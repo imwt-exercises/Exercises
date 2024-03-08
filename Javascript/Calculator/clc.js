@@ -45,7 +45,7 @@ function result() {
     if (operator=='+') {
         document.getElementById('display').value = n_1 + n_2;
     } else if (operator=='-') {
-        document.getElementById('display').value = n_1 + n_2;
+        document.getElementById('display').value = n_1 - n_2;
     } else if (operator=='*') {
         document.getElementById('display').value = n_1 * n_2;
     } else if (operator=='/') {
