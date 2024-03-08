@@ -55,18 +55,20 @@ function result() {
     }    
 }
 
+
+// FUNCTIONS FOR PHASE 7
+
 function cancel_7() {
     document.getElementById('display').value = 0;
 }
 
 function display_7(event) {
-    list_length = document.getElementById('list').childElementCount;
-    console.log(list_length);
     var c = document.getElementById('display').value;
     var to_add = event.target.value;
+    var equal_pressed = document.getElementById('equal').value;
     if (c.length==21) {
         document.getElementById('display').value = c[0] + '.' + c.slice(0,15) + 'e+21';
-    } else if (c==0) {
+    } else if (c==0 || equal_pressed) {
         document.getElementById('display').value = to_add;
     } else {
         document.getElementById('display').value = c + to_add;
@@ -79,9 +81,8 @@ function operation_7(event) {
     document.getElementById('list').value = n + ' ' + operator;
 }
 
-var isPow = false;
-
 function result_7() {
+    var isPow = false;
     var n1_operator = document.getElementById('list').value.split(' ');
     var n_1 = parseInt(n1_operator[0]);
     var operator = n1_operator[1];
@@ -96,28 +97,25 @@ function result_7() {
         document.getElementById('display').value = n_1 * n_2;
         var result = n_1 * n_2;
     } else if (operator=='/') {
-        document.getElementById('display').value = n_1 / n_2;
         var result = n_1 / n_2;
-    } else if (operator=='x<sup>y</sup>') {
+        result = result.toFixed(1);
+        document.getElementById('display').value = result;        
+    } else if (operator=='pow') {
         isPow = true;
         var operator = document.createElement('sup');
-        operator.innerText = 'y';
+        operator.innerText = n_2;
         document.getElementById('display').value = n_1 ** n_2;
         var result = n_1 ** n_2;
     }
-    // Creating individual items
-    // Devi trovare un modo per stampare bene la potenza
-    // Poi devi pensare a resettare il display dopo aver fatto
-    // un'operazione. 
-    // Ultima cosa: vedi se riesci a rendere più grande la calcolatrice
-    // e se riesci a rendere i bottoni più simili a quelli del prof.
+    
     var voce1 = document.createElement("li");
-    if (isPow==true) {
-        var testo1 = document.createTextNode(n_1 + ' x');
-        var testo2 = document.createTextNode(' ' + n_2 + ' = ' + result);
+    if (isPow) {
+        var testo1 = document.createTextNode(n_1);
+        var testo2 = document.createTextNode(' = ' + result);
         voce1.appendChild(testo1);
         voce1.appendChild(operator);
         voce1.appendChild(testo2);
+        isPow = false;
     } else {
         var testo1 = document.createTextNode(n_1 + ' ' + operator + ' ' + n_2 + ' = ' + result);
         voce1.appendChild(testo1);
@@ -125,4 +123,5 @@ function result_7() {
     // Insert items in a specific document location
     list = document.getElementById("list");
     list.insertBefore(voce1, null);
+    document.getElementById('equal').value = true;
 }
