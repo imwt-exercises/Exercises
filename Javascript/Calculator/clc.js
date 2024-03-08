@@ -50,7 +50,7 @@ function result() {
         document.getElementById('display').value = n_1 * n_2;
     } else if (operator=='/') {
         document.getElementById('display').value = n_1 / n_2;
-    } else if (operator=='**') {
+    } else if (operator=='x<sup>y</sup>') {
         document.getElementById('display').value = n_1 ** n_2;
     }    
 }
