@@ -87,35 +87,38 @@ function result_7() {
     var n_1 = parseInt(n1_operator[0]);
     var operator = n1_operator[1];
     var n_2 = parseInt(document.getElementById('display').value);
-    if (operator=='+') {
-        document.getElementById('display').value = n_1 + n_2;
-        var result = n_1 + n_2;
-    } else if (operator=='-') {
-        document.getElementById('display').value = n_1 - n_2;
-        var result = n_1 - n_2;
-    } else if (operator=='*') {
-        document.getElementById('display').value = n_1 * n_2;
-        var result = n_1 * n_2;
-    } else if (operator=='/') {
-        var result = n_1 / n_2;
-        result = result.toFixed(1);
-        document.getElementById('display').value = result;        
-    } else if (operator=='pow') {
-        isPow = true;
-        var operator = document.createElement('sup');
-        operator.innerText = n_2;
-        document.getElementById('display').value = n_1 ** n_2;
-        var result = n_1 ** n_2;
+    var result = 0;
+    switch (operator) {
+        case '+':
+            result = n_1 + n_2;
+            break;
+        case '-':
+            result = n_1 - n_2;
+            break;
+        case '*':
+            result = n_1 * n_2;
+            break;
+        case '/':
+            result = n_1 / n_2;
+            break;
+        case '**':
+            result = n_1 ** n_2;
+            isPow = true;
     }
-    
+    ListAndDisplay(n_1, n_2, operator, result, isPow);    
+}
+
+function ListAndDisplay(n_1, n_2, operator, result, bool) {
+    document.getElementById('display').value = result; //display on calculator
     var voce1 = document.createElement("li");
-    if (isPow) {
+    if (bool) {
+        var pow_symbol = document.createElement('sup');
+        pow_symbol.innerText = n_2;
         var testo1 = document.createTextNode(n_1);
         var testo2 = document.createTextNode(' = ' + result);
         voce1.appendChild(testo1);
-        voce1.appendChild(operator);
+        voce1.appendChild(pow_symbol);
         voce1.appendChild(testo2);
-        isPow = false;
     } else {
         var testo1 = document.createTextNode(n_1 + ' ' + operator + ' ' + n_2 + ' = ' + result);
         voce1.appendChild(testo1);
@@ -123,5 +126,6 @@ function result_7() {
     // Insert items in a specific document location
     list = document.getElementById("list");
     list.insertBefore(voce1, null);
-    document.getElementById('equal').value = true;
+
+    document.getElementById('equal').value = true; //it is to reset in display_7() the display for other operations
 }
