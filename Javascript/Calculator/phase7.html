@@ -19,8 +19,8 @@
                             <input type="text" class="col-sm text-end form-control" value="0" id="display">
                         </div>
                         <div class="row p-1">
-                            <button type="button" class="btn btn-danger col-6 m-1" id="cancel" onclick="cancel_7()">C</button>
-                            <button type="button" class="btn btn-light col m-1" value="x<sup>y</sup>" onclick="operation_7(event)">x<sup>y</sup></button>
+                            <button type="button" class="btn btn-danger focus-ring col-6 m-1" id="cancel" onclick="cancel_7()">C</button>
+                            <button type="button" class="btn btn-light col m-1" value="pow" onclick="operation_7(event)">x<sup>y</sup></button>
                             <button type="button" class="btn btn-dark col m-1" value="/" onclick="operation_7(event)">/</button>
                         </div>
                         <div class="row p-1">
@@ -44,7 +44,7 @@
                         <div class="row p-1">
                             <button type="button" class="btn btn-light col-6 m-1" value="0" onclick="display_7(event)">0</button>
                             <button type="button" class="btn btn-light col m-1" onclick="invertSign()">&#177</button>
-                            <button type="button" class="btn btn-primary col m-1" onclick="result_7()">=</button>
+                            <button type="button" class="btn btn-primary focus-ring col m-1" id="equal" value="false" onclick="result_7()">=</button>
                         </div>
                     </div>
                 </div>
